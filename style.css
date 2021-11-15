@@ -1,0 +1,49 @@
+.about-us__list {
+  width: 500px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+  counter-reset: my-counter;
+}
+
+.about-us__item {
+  counter-increment: my-counter;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px;
+  text-align: left;
+  box-shadow: 0px 0px 30px rgba(153, 118, 182, 0.2);
+  cursor: pointer;
+  transition: 0.5s;
+}
+.about-us__item::before {
+    content: "0" counter(my-counter) ")";
+    position: absolute;
+    left: -100px;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 70px;
+    line-height: 85px;
+    font-feature-settings: "pnum" on, "lnum" on;
+  }
+/*  */
+
+.us__list {
+  counter-reset: my-counter2;
+  list-style: none;
+}
+
+.us__item {
+  counter-increment: my-counter2;
+  position: relative;
+  padding-left: 15px;
+}
+
+.us__item::before {
+  content: counter(my-counter2) ")";
+  position: absolute;
+  left: 0;
+}
